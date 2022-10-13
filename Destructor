@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Destructor
+{
+    class User
+    {
+        public User()
+        {
+            Console.WriteLine("Instance Class Telah Berhasil Dibuat");
+        }
+        // Destructor
+        ~User()
+        {
+            Console.WriteLine("Instance Class Telah Berhasil di Destroy");
+        }
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Dijalankan();
+            GC.Collect();
+
+        }
+        public static void Dijalankan()
+        {
+            // Membuat Sebuah Instance Class
+            User user = new User();
+        }
+    }
+}
